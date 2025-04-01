@@ -31,9 +31,7 @@ function findUserLocation() {
       console.log(data);
       city.innerHTML = data.name + "," + data.sys.country;
       weatherIcon.style.background = `Url("https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png")`;
-      temperature.innerHTML = temConverter(Math.round(data.main.temp / 10));
-      feelsLike.innerHTML =
-        "Feels like " + temConverter(Math.round(data.main.feels_like / 10));
+    
       description.innerHTML =
         `<i class="fa-brands fa-cloudversify"></i> &nbsp` +
         data.weather[0].description;
@@ -74,6 +72,10 @@ function findUserLocation() {
       fetch(WEATHER_DATA_ENDPOINT + `${data.name}`)
         .then((Response) => Response.json())
         .then((data2) => {
+          console.log(data2)
+          temperature.innerHTML = temConverter(Math.round(data2.list[0].main.temp));
+          feelsLike.innerHTML =
+            "Feels like " + temConverter(Math.round(data2.list[0].main.feels_like));
             Forcaste.innerHTML = "";
           console.log(data2.list);
           for (let i = 0; i < data2.list.length; i += 8) {
