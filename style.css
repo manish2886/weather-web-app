@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: poppins;
+    box-sizing: border-box;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #222;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #08f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0ff;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #08f #222;
+}
+
+body {
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+
+.dark-mode .weather-input {
+    background-color: #1a1a1a;
+}
+
+.dark-mode .weater-output {
+    background-color: #222;
+}
+
+.dark-mode .Highlights div,
+.dark-mode .Forcaste div {
+    background: #1a1a1a;
+    color: #fff;
+    border: 1px solid #08f;
+    transition: all 0.5s ease;
+}
+
+/* Tech Glow Hover Effect */
+.Highlights div:hover, 
+.Forcaste div:hover {
+    box-shadow: 0px 0px 15px #08f;
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.weather-input {
+    width: 25%;
+    position: fixed;
+    inset: 0;
+    background-color: #2f8deb;
+    padding: 1rem 2.5rem;
+}
+
+.weatherIcon {
+    background-position: 50% !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+    display: block;
+    height: 25%;
+    margin: 2rem auto;
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0rem;
+}
+
+.input-group input {
+    background-color: #fff;
+    text-transform: capitalize;
+    padding: 1rem;
+    font-size: 15px;
+    border-radius: 6px;
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.input-group .converter {
+    position: absolute;
+    right: 45px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.input-group .fa-search {
+    position: absolute;
+    right: 15px;
+    color: rgb(79, 75, 75);
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.weater-output {
+    width: 75%;
+    position: fixed;
+    inset: 0;
+    margin-left: 25%;
+    padding: 2rem;
+    background: #fff;
+    overflow: auto;
+}
+
+.weather-input .feelsLike,
+.weather-input .description,
+.weather-input .date,
+.weather-input .city {
+    padding: 10px 0px;
+}
+
+.temperature {
+    font-size: 5rem;
+    text-align: center;
+    display: flex;
+    font-weight: 400;
+}
+
+.Highlights {
+    display: grid;
+    grid-template-columns: repeat(3, 350px);
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+
+.Forcaste {
+    display: grid;
+    grid-template-columns: repeat(4, 260px);
+    grid-auto-flow: row;
+    row-gap: 1rem;
+    column-gap: 10px;
+}
+
+.Highlights div,
+.Forcaste div {
+    height: 250px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #2f8deb;
+    border-radius: 20px;
+    padding: 1rem;
+}
+
+.Highlights i {
+    font-size: 45px;
+}
+
+.sun span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .weather-input {
+        width: 100%;
+        position: relative;
+    }
+    .weater-output {
+        width: 100%;
+        margin-left: 0;
+        position: relative;
+    }
+    .Highlights,
+    .Forcaste {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Dark Mode Toggle Button */
+.toggle-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #08f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.toggle-btn:hover {
+    box-shadow: 0px 0px 10px #08f;
+}
+.Forcaste-description{
+   
+    font-size: 0.8rem;
+    text-align: center;
+    padding-bottom: 5px;
+    font-style: italic;
+}
+.heading{
+    margin: 1rem 0rem;
+}
