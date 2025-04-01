@@ -16,16 +16,7 @@ This is a fully responsive weather app with a **dark mode toggle**, smooth anima
 - **Font Awesome for Icons**
 - **Custom-Styled Scrollbar**
 
-## Installation & Usage 📥
-1. Clone the repository:
-   ```sh
-   git clone https://github.com/your-username/weather-app.git
-   ```
-2. Navigate to the project folder:
-   ```sh
-   cd weather-app
-   ```
-3. Open `index.html` in your browser.
+
 
 ## How to Use 📝
 - Enter a location in the search box and press the search icon.
@@ -41,9 +32,6 @@ Contributions are welcome! To contribute:
 2. Create a new branch.
 3. Make your changes.
 4. Submit a pull request.
-
-## License 📜
-This project is licensed under the **MIT License**.
 
 ---
 
